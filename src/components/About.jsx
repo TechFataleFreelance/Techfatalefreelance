@@ -4,4 +4,4 @@ const Services = () => {
     return <h1> Services Page Here</h1>
 }
 
-export default Services
+export default Servicet
