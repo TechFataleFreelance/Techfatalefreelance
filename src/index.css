@@ -3,3 +3,13 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+@font-face {
+    font-family: 'brownsugar';
+    src: url('src/fonts/BrownSugar.ttf');
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('src/fonts/Montserrat-Medium.otf');
+}
