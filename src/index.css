@@ -13,3 +13,9 @@
     font-family: 'montserrat';
     src: url('src/fonts/Montserrat-Medium.otf');
 }
+
+.active{
+    font-size: 20px;
+    color:black;   
+}
+
