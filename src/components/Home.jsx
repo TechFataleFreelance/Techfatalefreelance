@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from 'framer-motion'
 import Hoverimg from "./Home/Hoverimg";
 import Carousel from "./Home/Carousel";
-
 const Home = () => {
     const slide = {
         duration: 2,
@@ -47,31 +46,31 @@ const Home = () => {
             </div>
             <div class="h-[30%] bg-gradient-to-b from-eastern-blue-600 from-0% to-white">
 
-</div>
+            </div>
             <div class=" flex border-0 h-full w-full bg-white ">
                 <div class=" flex items-center h-full bg-opacity-25 bg-eastern-blue-600 w-[40%]">
-                    <motion.img initial={{x:-500, opacty:0}} viewport={{once:true}} whileInView={{ x:0, opacity:1}} transition={{duration:2, type:'spring', delay:1.8}} src="src/assets/pexels-anna-nekrashevich-8534178(1).jpg" class="  w-[80%] drop-shadow-2xl rounded-[25px] ml-[45px]"></motion.img >
+                    <motion.img alt="macbook, latte, and airpods on a table" initial={{ x: -500, opacty: 0 }} viewport={{ once: true }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 2, type: 'spring', delay: 1.8 }} src="src/assets/pexels-anna-nekrashevich-8534178(1).jpg" class="  w-[80%] drop-shadow-2xl rounded-[25px] ml-[45px]"></motion.img >
                 </div>
-                <div class=" flex items-center flex-col h-full w-[60%] bg-white  ">
+                <div class=" flex items-center overflow-hidden flex-col h-full w-[60%] bg-white  ">
                     <h1 style={{ inlineSize: '750px' }} class=" font-montserrat tracking-widest text-center mt-[1.8%] text-[20px]">Why Choose me over Content Management Systems like <span class="text-cyan-800">Wordpress</span>?</h1>
-                    <div  class="pb-[2%] flex w-full  mt-[8px] items-top bg-transparent justify-center">
-                        <motion.h2 whileHover={{boxShadow: "0px 0px 20px 2px grey ", scale:1.02}} style={{ inlineSize: '750px' }} class="rounded-[20px] p-[2%] text-center text-white tracking-wide text-[15px] font-montserrat w-[full] shadow-[inset_0_0_20px_2px] bg-eastern-blue-600 mt-[2px]"  >While I like Wordpress and its capabilities and have used it before to build websites in the past, the customization of raw coded websites is unmatchable. Also, the plugins tend to
+                    <div class="pb-[2%] flex w-full  mt-[8px] items-top bg-transparent justify-center">
+                        <motion.h2 whileHover={{ boxShadow: "0px 0px 20px 2px grey ", scale: 1.02 }} style={{ inlineSize: '750px' }} class="rounded-[20px] p-[2%] text-center text-white tracking-wide text-[15px] font-montserrat w-[full] shadow-[inset_0_0_20px_2px] bg-eastern-blue-600 mt-[2px]"  >While I like Wordpress and its capabilities and have used it before to build websites in the past, the customization of raw coded websites is unmatchable. Also, the plugins tend to
                             pile up and become unmanageable. <br></br><br></br> With <span class="text-emerald-300 ">raw coded</span> websites, the stress of updating plugins, downloading themes, and constantly worrying if your site is still live, is over.  <br></br><br></br>
-                            <h1 class="text-black">What I use to Build your Website:</h1>
+                            <h1 class="text-white text-[20px]">What I use to Build your Website:</h1>
                             <li><a href="https://react.dev/" class=" text-blue-800 underline" target="_blank">React.js</a> - for functionaliity  </li>
                             <li><a href="https://tailwindcss.com/" target="_blank" class="text-pink-700 underline">Tailwind CSS</a> - for Stylng</li>
                             <li><a href="https://www.netlify.com/" target="_blank" class="text-purple-700 underline">Netlify </a>+ <a href="https://github.com/" target="_blank" class="text-green-800 underline">Github</a> - for Hosting</li>
                             <br></br>
                             <h3>These tools allow me to develop websites that are fully customiizable, fast-loading, and user-friendly. Your job, however isn't to worry about these tools, your job
-                                is to successfully run your buisness, leave the website developement/hosting to <span class="text-pink-200">me</span>!</h3>
+                                is to successfully run your business, leave the website developement/hosting to <span class="text-pink-200">me</span>!</h3>
                             <br></br>
-                            <h1 class="text-black">Types of Websites I Build:</h1>
+                            <h1 class="text-white text-[20px]">Types of Websites I Build:</h1>
                             <li><a href="" class=" text-yellow-300 " target="_blank">Buisness Websites</a></li>
                             <li><a href="" class=" text-yellow-300 " target="_blank">Ecommerce</a> (small-medium buisnesses)</li>
                             <li><a href="" class=" text-yellow-300 " target="_blank">Organization/club websites</a></li>
                         </motion.h2>
                     </div>
-                    <Carousel/>
+                    <Carousel />
                 </div>
 
             </div>
