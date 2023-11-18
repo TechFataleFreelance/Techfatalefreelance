@@ -1,37 +1,50 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef} from 'react'
 
 export default function Navbar() {
     const [show, setShow] = useState({top:[-200,0]})
-    const [display, setDisplay] = useState("hidden")
+
     const [transition, setTransition] =useState({duration:1, delay:.8})
-    const [display2, setDisplay2]=useState("")
- 
+    const [dropdownAnimation, setdropdownAnimation] = useState()
+    const shopTab = useRef()
+    const shopNav =useRef()
 
     const hover = {
         scale: 1.08,
     }
    
-    const handleHover = () => {
-        setDisplay("visible")
+    const  handleHover = () => {
+        shopTab.current.style.display ="inline"
+        shopTab.current.style.width ="100vw"
+        shopTab.current.style.height ="60px"
+        shopTab.current.style.transition ="width 1s ease .4 "
+        setdropdownAnimation({opacity:[0, 1]})
+        
     }
-    const handleHoverleave =() => {
-        setDisplay("hidden")
+
+    const handleHoverleave = () => {
+        shopTab.current.style.width ="0%"
+        shopTab.current.style.height ="0%"
+        shopTab.current.style.display ="none"
+        
+        setdropdownAnimation()
     }
+
+
 
     const controlNavbar = () => {
    
         if(window.scrollY>0){
             setShow({top:-300})
             setTransition({duration:0.18})
-            setDisplay2("none")
+       
          
             
         }else{
             setShow({top:0})
-            setDisplay2("flex")
+            
          
         }
     }
@@ -52,64 +65,44 @@ export default function Navbar() {
                 style={{opacity:[0,1]}}
                 transition={transition}
                 class=" fixed top-0 font-extrabold tracking-[5px]  text-[18px] font-montserrat border-solid border-0 border-black w-full bg-transparent h-[10%] flex justify-center items-center">
-                <motion.ul
+                <motion.ul 
                 class=" overflow-hidden text-white  min-w-full min-h-full border-solid border-0 border-blue flex items-center justify-evenly" >
                     <motion.li
                         whileHover={hover}
                         transition={{ duration: .25 }}
                         class= "hover:text-black"
                     >
-                        <NavLink path to='/'>Home</NavLink>
+                        <NavLink onMouseOver={handleHoverleave} path to='/'>Home</NavLink>
                     </motion.li>
                     <motion.li
-                
+                    ref={shopNav}
+                     whileHover={hover}
+                     transition={{ duration: .25 }}
+                     class= "hover:text-black rounded-tr-xl hover:pt-[5px] pl-[5px]  cursor-pointer flex items-center justify-center"
                     >
-                        <div onMouseEnter={handleHover} onMouseLeave={handleHoverleave} class="mt-[118px] h-[8%] w-full flex items-center flex-col border-0 border-black border-solid ">
-                            <motion.div 
-                            whileHover={hover}
-                            class=" hover:text-black" >
-                                <NavLink path to='/shop'>Shop</NavLink>
-                            </motion.div>
-                          
-                            <motion.div
-            
-                            style={{visibility:display, display:display2}}
-                             class=" shadow-[inset_0px_0px_3px_1.5px] text-white shadow-black p-[8px] tracking-[2px] mt-[5px]   border-0 rounded-[10px] text-[18px] bg-sky-800 flex w-[150px] h-[120px] items-center flex-col ">
-                                <motion.div
-                               
-                                whileHover={{scale:1.03}}
-                                class=" pb-[10px] hover:text-black"
-                                >
-                                    <NavLink path to="/templates"  style={{display:"none"}}>Templates</NavLink>
-                                </motion.div>
-                                <motion.div
-                                whileHover={{scale:1.03}}
-                                class="hover:text-black pb-[10px]"
-                                >
-                                    <NavLink path to="/">Services</NavLink>
-                                </motion.div>
-                                <motion.div
-                                whileHover={{scale:1.03}}
-                                class="hover:text-black pb-[10px]"
-                                >
-                                    <NavLink path to="/">Deals</NavLink>
-                                </motion.div>
-                            </motion.div>
-                        </div>
+                        <NavLink onMouseOver={handleHover}  path to='/shop'>Shop</NavLink>
                         
                     </motion.li>
+                    <motion.div onMouseOver={handleHover} onMouseLeave={handleHoverleave} animate={dropdownAnimation} style={{display:'none'}}  ref={shopTab} class=" absolute top-[66px] w-[0%] right-[0%] h-[0%]  bg-white">
+                        <ul class=" flex justify-center items-center  text-eastern-blue-600">
+                            <li class="mt-[1%] mr-[8%] hover:text-black cursor-pointer"><NavLink path to='/shop'>All</NavLink></li>
+                            <li class="mt-[1%] mr-[8%] hover:text-black cursor-pointer"> <NavLink path to='/services'>Services</NavLink></li>
+                            <li class="mt-[1%] mr-[8%] hover:text-black cursor-pointer"><NavLink path to='/deals'>Deals</NavLink></li>
+                           
+                        </ul>
+                    </motion.div>
                     <motion.li
                         whileHover={hover}
                         transition={{ duration: .25 }}
                         class= "hover:text-black"
                     >
-                        <NavLink path to='/about'>About</NavLink>
+                        <NavLink onMouseOver={handleHoverleave} path to='/about'>About</NavLink>
                     </motion.li>
                     <motion.li
                         whileHover={{ scale: 1.05 }}
                         transition={{ ease: "circIn", duration: .05 }}
                     >
-                        <Link class=" text-black drop-shadow-lg rounded-lg bg-gradient-to-r from-eastern-blue-300 via-eastern-blue-200 to-eastern-blue-100 p-[10px] hover:bg-gradient-to-l from-eastern-blue-300 via-eastern-blue-200 to-eastern-blue-100 hover:rounded-[20px] transition-all ease-in-out" path to='/contact'>Contact</Link>
+                        <Link onMouseOver={handleHoverleave} class=" text-black drop-shadow-lg rounded-lg bg-gradient-to-r from-eastern-blue-300 via-eastern-blue-200 to-eastern-blue-100 p-[10px] hover:bg-gradient-to-l from-eastern-blue-300 via-eastern-blue-200 to-eastern-blue-100 hover:rounded-[20px] transition-all ease-in-out" path to='/contact'>Contact</Link>
                     </motion.li>
 
                 </motion.ul>
