@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from 'framer-motion'
 import Hoverimg from "./Home/Hoverimg";
 import Carousel from "./Home/Carousel";
+import Carousel2 from "./Home/Carousel2";
+
 const Home = () => {
     const slide = {
         duration: 2,
@@ -27,8 +29,12 @@ const Home = () => {
                     transition={{ duration: 1.5, delay: 2.2 }}
                     class=" mt-[2%] tracking-[8px] text-sm font-montserrat text-white">FREELANCE</motion.h2>
             </div>
-            <div class="h-[75%] bg-gradient-to-b from-eastern-blue-600 from-5% to-white">
-
+            <div class="flex flex-col border-solid h-[75%] bg-gradient-to-b from-eastern-blue-600 from-5% to-white">
+                <h1 class="text-white tracking-wide font-brownsugar text-center text-[45px]">Client <span class="text-black">Websites</span></h1>
+                <Carousel2 buttonHeight="20.5%" scrollValue="800">
+                    <a target="_blank" href="https://austin-zickur-personal-portfolio.netlify.app/"><img className=" border-solid border-2 hover:scale-[100.2%] transition-all ease-in border-eastern-blue-700 rounded-lg  bg-[url('src/assets/Austinsmock.png')] hover:drop-shadow-xl hover:border-0  bg-cover bg-center w-[33%] ml-[5%] mr-[5%] h-[98%] bg-white inline"></img></a>
+                  
+                </Carousel2>
             </div>
             <div class="snap-center w-full h-[100vh] bg-white flex flex-col">
                 <div class="relative p-[15px] drop-shadow-[0px_0px_8px_15px] text-eastern-blue-800 text-center text-[20px] font-extrabold tracking-[8px] bg-white font-montserrat h-50 w-full border-0 border-solid">
@@ -45,7 +51,7 @@ const Home = () => {
                 </div>
             </div>
             <div class="h-[30%] bg-gradient-to-b from-eastern-blue-600 from-0% to-white">
-
+               
             </div>
             <div class=" flex border-0 h-full w-full bg-white ">
                 <div class=" flex items-center h-full bg-opacity-25 bg-eastern-blue-600 w-[40%]">
@@ -74,6 +80,7 @@ const Home = () => {
                 </div>
 
             </div>
+          
         </>
 
     )

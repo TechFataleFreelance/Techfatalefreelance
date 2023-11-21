@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 
-export default function Carouse(props) {
+export default function Carousel(props) {
 
     const carouselDiv = useRef();
 
