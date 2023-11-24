@@ -22,7 +22,7 @@ export default function Carousel(props) {
             </h1>
 
             <div className=" w-full h-full bg-transparent ">
-                <div ref={carouselDiv}  className="overflow-y-visible text-white no-scrollbar bg-transparent h-full scroll-smooth pt-[1.5%]  text-center overflow-x-auto whitespace-nowrap ">
+                <div ref={carouselDiv}  className="overflow-y-visible text-white no-scrollbar bg-transparent h-full scroll-smooth pt-[1.5%] cursor-default  text-center overflow-x-auto whitespace-nowrap ">
               
                     <a target="_blank" href="https://blog.techliance.com/benefits-of-reactjs/"><motion.img alt="React.js-article about why it's better for business" whileHover={{scale:1.02, boxShadow:' 0px  0px 9px 0.5px black'}} src='src/assets/Screenshot 2023-11-17 at 5.51.48 PM.png' class="w-[16%]  ml-[11%] mr-[15%] hover:cursor-pointer shadow-md rounded-[15px] inline"></motion.img></a>
                     <a target="_blank" href="https://www.linkedin.com/pulse/why-do-businesses-select-react-js-web-development-mateen-rathore"><motion.img alt='linked in article about why React.js is  better for buisness' whileHover={{scale:1.02, boxShadow:' 0px  0px 9px 0.5px black'}} src='src/assets/Screenshot 2023-11-17 at 6.16.54 PM.png' class="w-[16%] mr-[15%] hover:cursor-pointer shadow-md rounded-[15px] inline"></motion.img></a>

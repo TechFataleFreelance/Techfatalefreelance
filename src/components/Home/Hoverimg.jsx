@@ -28,10 +28,13 @@ export default function Hoverimg(props) {
         class="relative  text-white md:text-[20px] tracking-[3.2px]  font-montserrat lg:text-[16px] break-words text-center flex items-center justify-center bottom-[100%] w-[100%] h-[100%] rounded-[20px] bg-opacity-70 hover:bg-opacity-40 hover:backdrop-blur-md hover:shadow-inner bg-eastern-blue-950" >
             <h1  style={{inlineSize:"250px"}} >{props.text}</h1>
         </h1>
+        <Link path to="/products">
         <button 
         style={{display:props.btndisplay}}
         
         class="absolute bottom-[10%] text-eastern-blue-800 left-[25%] hover:shadow-lg text-md shadow-[0px_0px_8px_1px_white] hover:text-white w-[50%] hover:bg-eastern-blue-600 text-center h-[10%] rounded-[5px] font-montserrat bg-white">CLICK HERE</button>
+        </Link>
+       
         </motion.div>
      
     )

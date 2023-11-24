@@ -32,7 +32,7 @@ const Home = () => {
             <div class="flex flex-col border-solid h-[75%] bg-gradient-to-b from-eastern-blue-600 from-5% to-white">
                 <h1 class="text-white tracking-wide font-brownsugar text-center text-[45px]">Client <span class="text-black">Websites</span></h1>
                 <Carousel2 buttonHeight="20.5%" scrollValue="800">
-                    <a target="_blank" href="https://austin-zickur-personal-portfolio.netlify.app/"><img className=" border-solid border-2 hover:scale-[100.2%] transition-all ease-in border-eastern-blue-700 rounded-lg  bg-[url('src/assets/Austinsmock.png')] hover:drop-shadow-xl hover:border-0  bg-cover bg-center w-[33%] ml-[5%] mr-[5%] h-[98%] bg-white inline"></img></a>
+                    <a target="_blank" href="https://austin-zickur-personal-portfolio.netlify.app/"><img className=" border-solid border-2 hover:scale-[100.2%] transition-all ease-in border-eastern-blue-700 rounded-lg  bg-[url('src/assets/Austinsmock.png')] hover:drop-shadow-xl hover:border-0  bg-cover bg-center w-[34%] ml-[5%] mr-[5%] h-[98%] bg-white inline"></img></a>
                   
                 </Carousel2>
             </div>
@@ -45,8 +45,8 @@ const Home = () => {
                     <h1>HOSTING+</h1>
                 </div>
                 <div class="bg-gradient-to-b from-white to-eastern-blue-600 border-solid w-full h-full flex justify-evenly items-center ">
-                    <Hoverimg source="src/assets/pexels-mikael-blomkvist-6483581.jpg" btndisplay="none" text="SEND ME YOUR INSPIRATION PICTURES, MOCKUPS, COLOR PALLETS, ETC. AND LET ME BUILD YOUR FULLY CUSTOMIZED WEBSITE" delay="0" ></Hoverimg>
-                    <Hoverimg source="src/assets/pexels-mikael-blomkvist-6483591.jpg" text="CHECKOUT MY WEBSITE PRICES AND DEALS! " delay=".2"></Hoverimg>
+                    <Hoverimg source="src/assets/pexels-mikael-blomkvist-6483581.jpg" btndisplay="none" text="FIND THE TYPE OF WEBSITE THAT'S RIGHT FOR YOU. I OFFER WEBSITES OF  ALL KINDS, AND I AM OPEN TO EVEN MORE! " delay="0" ></Hoverimg>
+                    <Hoverimg source="src/assets/pexels-mikael-blomkvist-6483591.jpg" text="CHECKOUT WHAT'S NEW IN THE SHOP! " delay=".2"></Hoverimg>
                     <Hoverimg source="src/assets/pexels-mikael-blomkvist-6483581.jpg" text="BE WITH YOUR WEBSITE FOR EVERY STEP OF THE PROCESS THROUGH ONE-ON-ONE MEETINGS PRE-SCHEDULED WITH ME!" imgstyle={{ rotateY: 180 }} btndisplay="none" delay=".4"></Hoverimg>
                 </div>
             </div>
