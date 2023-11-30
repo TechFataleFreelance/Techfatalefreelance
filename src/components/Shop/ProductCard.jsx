@@ -9,7 +9,7 @@ const ProductCard = (props) => {
             whileInView={{opacity:[0,1]}} 
             whileHover={{boxShadow: '0px 0px 15px 1px black'}}
             transition={{duration:0.44}}
-            key={props.key} className='hover:cursor-pointer rounded-[25px] h-[555px] w-[450px]'>
+            key={props.key} className='hover:cursor-default rounded-[25px] h-[555px] w-[450px]'>
                  <img src={props.image} alt="Product Image" className=" w-full h-[50%]"/>
                  <h1 className=' font-montserrat tracking-wider text-[19px] mt-[5%] text-center'>{props.name}</h1>
                  <h2 className='text-center text-[18px] text-white pt-[18px] font-semibold'>${props.price}</h2>
