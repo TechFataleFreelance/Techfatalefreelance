@@ -6,7 +6,7 @@ export default function Footer() {
         <>
             <footer class="  w-full h-[50%] bottom-0 rounded-sm bg-white">
                 <div class="flex mt-[2%] text-gray-600 font-montserrat text-[14px] items-center  w-full h-[10%] border-t-[#8a9093] bg-transparent">
-                    <p> <span class=" -500 font-bold">All Clients</span> are Required to sign a contract upon agreement of the website project
+                    <p> <a href="" class=" -500 font-bold">All Clients</a> are Required to sign a contract upon agreement of the website project
                         <br></br>
                        
                       for <span  class="text-[13px] text-eastern-blue-700 hover:cursor-pointer underline underline-offset-[3px]">contract details</span>  click here 

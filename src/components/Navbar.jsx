@@ -85,7 +85,7 @@ export default function Navbar() {
                     </motion.li>
                     <motion.div onMouseOver={handleHover} onMouseLeave={handleHoverleave} animate={dropdownAnimation} style={{display:'none'}}  ref={shopTab} class=" absolute top-[66px] w-[0%] right-[0%] h-[0%]  bg-white">
                         <ul class=" flex justify-center items-center  text-eastern-blue-600">
-                            <li class="mt-[1%] mr-[8%] hover:text-black cursor-pointer"><NavLink path to='/products'>Products</NavLink></li>
+                            <li class="mt-[1%] mr-[8%] hover:text-black cursor-pointer"><NavLink path to='/products'>All Products</NavLink></li>
                             <li class="mt-[1%] mr-[8%] hover:text-black cursor-pointer"><NavLink path to='/websites'>Websites</NavLink></li>
                             <li class="mt-[1%] mr-[8%] hover:text-black cursor-pointer"> <NavLink path to='/services'>Services</NavLink></li>
                            
